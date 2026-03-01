@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>Artigos – Preparação para o CELPE-BRAS</title>
+
+  <meta name="description"
+        content="Artigos especializados sobre o exame CELPE-BRAS: preparação, estratégias, gêneros textuais, gramática e dicas para cada nível de certificação.">
+
+  <link rel="canonical" href="https://celpebras.org/artigos/" />
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Artigos – Preparação para o CELPE-BRAS">
+  <meta property="og:description"
+        content="Artigos sobre o CELPE-BRAS: gêneros textuais, gramática, parte oral, inscrição e estratégias de preparação.">
+  <meta property="og:image"
+        content="https://celpebras.org/assets/images/og-default.jpg">
+  <meta property="og:url" content="https://celpebras.org/artigos/">
+  <meta property="og:site_name" content="CelpeBras.org">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Artigos – Preparação para o CELPE-BRAS">
+  <meta name="twitter:description"
+        content="Artigos especializados para sua preparação para o exame CELPE-BRAS.">
+
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/newhome.css">
+
+  <style>
+    .articles-hero {
+      text-align: center;
+      padding: 3.5rem 1.25rem 2.5rem;
+      background: linear-gradient(160deg, #f0fdf4 0%, #fff 60%);
+    }
+    .articles-hero h1 {
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 0.75rem;
+    }
+    .articles-hero-subtitle {
+      font-size: 1.05rem;
+      color: #555;
+      max-width: 620px;
+      margin: 0 auto 1.75rem;
+      line-height: 1.65;
+    }
+
+    /* Featured */
+    .featured-article {
+      max-width: 860px;
+      margin: 0 auto 2.5rem;
+      padding: 0 1.25rem;
+    }
+    .featured-article h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #2e7d32;
+      margin-bottom: 1.1rem;
+    }
+    .featured-card {
+      display: flex;
+      gap: 1.75rem;
+      background: #fff;
+      border-radius: 1.4rem;
+      overflow: hidden;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .featured-card:hover {
+      box-shadow: 0 10px 32px rgba(46,125,50,0.14);
+      transform: translateY(-2px);
+    }
+    .featured-card-image {
+      flex: 0 0 300px;
+      max-width: 300px;
+    }
+    .featured-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .featured-card-content {
+      padding: 1.75rem 1.75rem 1.75rem 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .featured-card-content h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 0.75rem;
+      line-height: 1.4;
+    }
+    .featured-card-content p {
+      font-size: 0.97rem;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+    }
+    .featured-read-more {
+      font-size: 0.93rem;
+      font-weight: 600;
+      color: #2e7d32;
+    }
+    @media (max-width: 640px) {
+      .featured-card { flex-direction: column; }
+      .featured-card-image { flex: none; max-width: 100%; height: 200px; }
+      .featured-card-content { padding: 1.25rem; }
+    }
+
+    /* Grid */
+    .articles-grid-section {
+      max-width: 1060px;
+      margin: 0 auto 3rem;
+      padding: 0 1.25rem;
+    }
+    .articles-grid-section h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 1.5rem;
+    }
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.4rem;
+    }
+    @media (max-width: 860px) {
+      .articles-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 540px) {
+      .articles-grid { grid-template-columns: 1fr; }
+    }
+    .blog-card {
+      background: #fff;
+      border-radius: 1.1rem;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .blog-card:hover {
+      box-shadow: 0 8px 24px rgba(46,125,50,0.13);
+      transform: translateY(-2px);
+    }
+    .blog-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      display: block;
+    }
+    .blog-card-body {
+      padding: 1rem 1.1rem 1.25rem;
+      flex: 1;
+    }
+    .blog-card-body h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      line-height: 1.4;
+      margin-bottom: 0.45rem;
+    }
+    .blog-card-body p {
+      font-size: 0.87rem;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    /* CTA bottom */
+    .articles-cta-bottom {
+      text-align: center;
+      padding: 3rem 1.25rem;
+      background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+      color: #fff;
+    }
+    .articles-cta-bottom h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+    .articles-cta-bottom p {
+      font-size: 1rem;
+      opacity: 0.88;
+      margin-bottom: 1.5rem;
+    }
+    .cta-green {
+      display: inline-block;
+      background: #fff;
+      color: #2e7d32;
+      font-weight: 700;
+      padding: 0.85rem 2rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background 0.2s;
+    }
+    .cta-green:hover { background: #f0fdf4; }
+    .articles-hero .cta-green {
+      background: #2e7d32;
+      color: #fff;
+    }
+    .articles-hero .cta-green:hover { background: #1b5e20; }
+  </style>
+</head>
+
+<body>
+
+<header class="cl-header">
+  <div class="cl-header-inner">
+    <a href="/" class="cl-logo">
+      <img src="/assets/images/br.svg" alt="BR" />
+      <span>CelpeBras.org</span>
+    </a>
+    <nav class="cl-nav">
+      <a href="/sobre-o-exame/">Sobre o exame</a>
+      <a href="/teste-gratuito/">Teste gratuito</a>
+      <a href="/artigos/" class="active">Artigos</a>
+      <a href="/contato/">Contato</a>
+      <a href="https://civiclearn.com/celpe/login">Entrar</a>
+    </nav>
+    <div class="cl-right">
+      <div class="cl-powered">powered by <span>CivicLearn</span></div>
+      <a href="https://civiclearn.com/celpe/checkout" class="cl-btn">Acesso completo</a>
+    </div>
+  </div>
+</header>
+
+<section class="articles-hero">
+  <h1>Artigos sobre o CELPE-BRAS</h1>
+  <p class="articles-hero-subtitle">
+    Artigos especializados sobre o exame CELPE-BRAS: preparação, gêneros textuais, gramática, parte oral e estratégias para cada nível de certificação.
+  </p>
+  <a href="https://civiclearn.com/celpe/checkout" class="cta-green">Comece sua preparação</a>
+</section>
+
+<section class="featured-article">
+  <h2>Artigo em destaque</h2>
+  <a id="featured-card" class="featured-card" href="#">
+    <div class="featured-card-image">
+      <img id="featured-image" src="" alt="">
+    </div>
+    <div class="featured-card-content">
+      <h3 id="featured-title"></h3>
+      <p id="featured-desc"></p>
+      <span class="featured-read-more">Ler artigo →</span>
+    </div>
+  </a>
+</section>
+
+<section class="articles-grid-section">
+  <h2>Todos os artigos</h2>
+  <div class="articles-grid" id="articlesGrid"></div>
+</section>
+
+<section class="articles-cta-bottom">
+  <h3>Quer passar no CELPE-BRAS de primeira?</h3>
+  <p>Faça simulações completas com avaliação por IA e prepare-se com os critérios oficiais do exame.</p>
+  <a href="https://civiclearn.com/celpe/checkout" class="cta-green">Acesso completo — R$ 299</a>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>© <span id="footer-year"></span> CelpeBras.org — membro da rede CivicLearn.</div>
+    <div class="footer-links">
+      <a href="/teste-gratuito/">Teste gratuito</a>
+      <a href="/artigos/">Artigos</a>
+      <a href="/contato/">Contato</a>
+      <a href="/politicas/">Políticas</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(async function () {
+  let all;
+  try {
+    const res = await fetch('articles.json');
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    all = await res.json();
+  } catch (err) {
+    console.error('Could not load articles.json:', err);
+    return;
+  }
+
+  // Featured card: daily rotation
+  const dayIndex = Math.floor(Date.now() / (1000 * 60 * 60 * 24));
+  const featured = all[dayIndex % all.length];
+
+  document.getElementById("featured-card").href         = featured.url;
+  document.getElementById("featured-image").src         = featured.image;
+  document.getElementById("featured-image").alt         = featured.title;
+  document.getElementById("featured-title").textContent = featured.title;
+  document.getElementById("featured-desc").textContent  = featured.desc;
+
+  // Grid: all articles
+  const grid = document.getElementById("articlesGrid");
+  if (!grid) return;
+
+  grid.innerHTML = all.map(function(a) {
+    return '<a href="' + a.url + '" class="blog-card">'
+      + '<img src="' + a.image + '" alt="' + a.title.replace(/"/g, '&quot;') + '" loading="lazy">'
+      + '<div class="blog-card-body">'
+      + '<h3>' + a.title + '</h3>'
+      + '<p>' + a.desc + '</p>'
+      + '</div>'
+      + '</a>';
+  }).join('');
+})();
+
+document.getElementById("footer-year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

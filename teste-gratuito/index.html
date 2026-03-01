@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teste Gratuito – Simulação CELPE-BRAS | CelpeBras.org</title>
+
+  <meta name="description" content="Experimente uma tarefa real do CELPE-BRAS gratuitamente: assista a um vídeo, escreva seu texto e receba avaliação por IA com os critérios oficiais. Sem registro.">
+  <link rel="canonical" href="https://celpebras.org/teste-gratuito/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Teste Gratuito – Simulação CELPE-BRAS | CelpeBras.org">
+  <meta property="og:description" content="Experimente uma tarefa real do CELPE-BRAS com avaliação por IA. Grátis e sem registro.">
+  <meta property="og:url" content="https://celpebras.org/teste-gratuito/">
+  <meta property="og:image" content="https://celpebras.org/assets/images/og-default.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Teste Gratuito – Simulação CELPE-BRAS">
+  <meta name="twitter:description" content="Experimente uma tarefa real do CELPE-BRAS com avaliação por IA. Grátis e sem registro.">
+
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/newhome.css">
+
+  <style>
+    .ft-wrap {
+      max-width: 780px;
+      margin: 2.5rem auto 4rem;
+      padding: 0 1.25rem;
+    }
+
+    .ft-card {
+      background: #fff;
+      border-radius: 1.5rem;
+      padding: 2.5rem 2.5rem 2rem;
+      box-shadow: 0 6px 28px rgba(0,0,0,0.08);
+    }
+    @media (max-width: 600px) {
+      .ft-card { padding: 1.5rem 1.25rem 1.5rem; }
+    }
+
+    /* ---- Welcome ---- */
+    .ft-welcome { text-align: center; }
+    .ft-welcome h1 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 0.6rem;
+    }
+    .ft-welcome .ft-sub {
+      font-size: 1.05rem;
+      color: #555;
+      margin-bottom: 1.75rem;
+      line-height: 1.6;
+    }
+    .ft-info-box {
+      background: #f0fdf4;
+      border-radius: 1rem;
+      padding: 1.3rem 1.6rem;
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+    .ft-info-box h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 0.8rem;
+    }
+    .ft-info-box ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .ft-info-box li {
+      font-size: 0.93rem;
+      color: #555;
+      padding: 0.4rem 0;
+      display: flex;
+      gap: 0.5rem;
+    }
+    .ft-info-box li::before {
+      content: "✓";
+      color: #2e7d32;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* ---- Buttons ---- */
+    .ft-btn {
+      padding: 0.8rem 1.6rem;
+      border-radius: 999px;
+      font-size: 0.97rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+    }
+    .ft-btn-primary {
+      background: #2e7d32;
+      color: #fff;
+    }
+    .ft-btn-primary:hover:not([disabled]) {
+      background: #1b5e20;
+      transform: translateY(-1px);
+    }
+    .ft-btn-secondary {
+      background: #d4edda;
+      color: #1b5e20;
+    }
+    .ft-btn-secondary:hover:not([disabled]) {
+      background: #b8dfbf;
+    }
+    .ft-btn[disabled] {
+      opacity: 0.45;
+      cursor: not-allowed;
+      transform: none !important;
+    }
+
+    /* ---- Fade animation ---- */
+    @keyframes ftFadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ---- Writing task ---- */
+    .ft-tarefa { display: none; }
+    .ft-tarefa.active { display: block; animation: ftFadeIn 0.28s ease; }
+
+    .ft-section-badge {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.85rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+      background: #fff3cd;
+      color: #856404;
+    }
+
+    .ft-video-block {
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 1.25rem;
+      background: #000;
+      aspect-ratio: 16/9;
+    }
+    .ft-video-block video {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .ft-video-note {
+      font-size: 0.82rem;
+      color: #6b7280;
+      margin-bottom: 1.5rem;
+    }
+
+    .ft-task-prompt {
+      background: #f0fdf4;
+      border-left: 3px solid #2e7d32;
+      border-radius: 0 12px 12px 0;
+      padding: 1.2rem 1.4rem;
+      margin-bottom: 1.5rem;
+    }
+    .ft-task-prompt h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1b5e20;
+      margin: 0 0 0.5rem;
+    }
+    .ft-task-prompt p {
+      font-size: 0.95rem;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .ft-textarea {
+      width: 100%;
+      min-height: 260px;
+      padding: 1rem 1.2rem;
+      border: 2px solid #e5e2db;
+      border-radius: 0.85rem;
+      font-size: 1rem;
+      font-family: inherit;
+      color: #1a1a1a;
+      background: #fafafa;
+      resize: vertical;
+      line-height: 1.7;
+      box-sizing: border-box;
+      transition: border-color 0.18s;
+    }
+    .ft-textarea:focus {
+      outline: none;
+      border-color: #2e7d32;
+      background: #fff;
+    }
+    .ft-word-count {
+      font-size: 0.82rem;
+      color: #888;
+      text-align: right;
+      margin-top: 0.4rem;
+      margin-bottom: 1.25rem;
+    }
+    .ft-word-count.warning { color: #d97706; }
+    .ft-word-count.good { color: #2e7d32; }
+
+    .ft-nav {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    /* ---- Error ---- */
+    .ft-error {
+      display: none;
+      background: #fef2f2;
+      border-left: 3px solid #ef4444;
+      border-radius: 0 10px 10px 0;
+      padding: 1rem 1.2rem;
+      margin: 1rem 0;
+      font-size: 0.93rem;
+      color: #991b1b;
+      text-align: left;
+    }
+
+    /* ---- Loading ---- */
+    .ft-loading {
+      display: none;
+      text-align: center;
+      padding: 3rem 0;
+    }
+    .ft-loading.active { display: block; }
+    .ft-loading h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 0.5rem;
+    }
+    .ft-loading p {
+      color: #555;
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+    }
+    .ft-spinner {
+      width: 48px;
+      height: 48px;
+      border: 4px solid #d4edda;
+      border-top-color: #2e7d32;
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      animation: ftSpin 0.8s linear infinite;
+    }
+    @keyframes ftSpin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* ---- Results ---- */
+    .ft-results { display: none; }
+    .ft-results.active { display: block; text-align: center; animation: ftFadeIn 0.28s ease; }
+
+    .ft-results h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 0.5rem;
+    }
+    .ft-score-msg {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    .ft-score-ring {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      margin: 1.5rem auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #fff;
+      background: linear-gradient(135deg, #2e7d32 0%, #66bb6a 100%);
+      box-shadow: 0 8px 28px rgba(46,125,50,0.28);
+      line-height: 1.3;
+      text-align: center;
+      white-space: pre-line;
+    }
+
+    /* ---- AI feedback ---- */
+    .ft-ai-feedback {
+      background: #fff;
+      border: 1.5px solid #e5e2db;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      text-align: left;
+    }
+    .ft-ai-feedback h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin: 0 0 0.4rem;
+    }
+    .ft-ai-feedback .ft-ai-level {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 0.25rem 0.8rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+    .ft-ai-level.intermediario { background: #fff3cd; color: #856404; }
+    .ft-ai-level.intermediario-superior { background: #d4edda; color: #1b5e20; }
+    .ft-ai-level.avancado { background: #cce5ff; color: #004085; }
+    .ft-ai-level.avancado-superior { background: #d1c4e9; color: #4a148c; }
+    .ft-ai-level.sem-certificacao { background: #f8d7da; color: #721c24; }
+
+    .ft-criteria-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6rem;
+      margin-bottom: 1rem;
+    }
+    @media (max-width: 500px) {
+      .ft-criteria-grid { grid-template-columns: 1fr; }
+    }
+    .ft-criterion {
+      background: #fafafa;
+      border-radius: 0.6rem;
+      padding: 0.6rem 0.8rem;
+    }
+    .ft-criterion-label {
+      font-size: 0.78rem;
+      color: #888;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .ft-criterion-score {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1a1a1a;
+    }
+    .ft-ai-comment {
+      font-size: 0.93rem;
+      color: #444;
+      line-height: 1.65;
+      margin-top: 0.5rem;
+    }
+
+    /* ---- CTA box ---- */
+    .ft-cta-box {
+      background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+      color: #fff;
+      border-radius: 1.3rem;
+      padding: 1.8rem 2rem;
+      margin-top: 1.75rem;
+      text-align: left;
+    }
+    .ft-cta-box h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.9rem;
+    }
+    .ft-cta-box ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.4rem;
+    }
+    .ft-cta-box li {
+      font-size: 0.95rem;
+      padding: 0.4rem 0;
+      display: flex;
+      gap: 0.5rem;
+    }
+    .ft-cta-box li::before {
+      content: "✓";
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .ft-btn-white {
+      display: inline-block;
+      background: #fff;
+      color: #2e7d32;
+      font-weight: 700;
+      padding: 0.85rem 1.75rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 0.97rem;
+      transition: background 0.2s;
+    }
+    .ft-btn-white:hover { background: #f0fdf4; }
+
+    .ft-restart-btn { margin-top: 1.25rem; }
+  </style>
+</head>
+
+<body>
+
+<header class="cl-header">
+  <div class="cl-header-inner">
+    <a href="/" class="cl-logo">
+      <img src="/assets/images/br.svg" alt="BR" />
+      <span>CelpeBras.org</span>
+    </a>
+    <nav class="cl-nav">
+      <a href="/sobre-o-exame/">Sobre o exame</a>
+      <a href="/teste-gratuito/" class="active">Teste gratuito</a>
+      <a href="/artigos/">Artigos</a>
+      <a href="/contato/">Contato</a>
+      <a href="https://civiclearn.com/celpe/login">Entrar</a>
+    </nav>
+    <div class="cl-right">
+      <div class="cl-powered">powered by <span>CivicLearn</span></div>
+      <a href="https://civiclearn.com/celpe/checkout" class="cl-btn">Acesso completo</a>
+    </div>
+  </div>
+</header>
+
+
+<div class="ft-wrap">
+  <div class="ft-card">
+
+    <!-- ==================== WELCOME ==================== -->
+    <div id="ft-welcome" class="ft-welcome">
+      <h1>Teste Gratuito CELPE-BRAS</h1>
+      <p class="ft-sub">
+        Experimente uma tarefa real do exame CELPE-BRAS.<br>
+        Assista ao vídeo, escreva seu texto e receba avaliação por inteligência artificial.
+      </p>
+
+      <div class="ft-info-box">
+        <h3>Como funciona?</h3>
+        <ul>
+          <li>Você assiste a um vídeo curto (reportagem brasileira)</li>
+          <li>Escreve um texto no formato solicitado — como na Tarefa 1 do exame</li>
+          <li>Recebe avaliação imediata por IA com os 5 critérios oficiais do CELPE-BRAS</li>
+          <li>Sem registro — totalmente gratuito</li>
+          <li>Duração estimada: 15–25 minutos</li>
+        </ul>
+      </div>
+
+      <button class="ft-btn ft-btn-primary" onclick="startTarefa()">Começar a tarefa →</button>
+    </div>
+
+
+    <!-- ==================== WRITING TASK ==================== -->
+    <div id="ft-tarefa" class="ft-tarefa">
+      <span class="ft-section-badge">Tarefa 1 — Produção escrita a partir de vídeo</span>
+
+      <div class="ft-video-block">
+        <video controls playsinline>
+          <source src="https://media.civiclearn.com/celpe/video/freevideo.mp4" type="video/mp4">
+          Seu navegador não suporta vídeo.
+        </video>
+      </div>
+      <div class="ft-video-note">Assista ao vídeo quantas vezes precisar antes de escrever.</div>
+
+      <div class="ft-task-prompt">
+        <h3>Proposta de redação</h3>
+        <p>
+          Com base no vídeo que você assistiu sobre o impacto das redes sociais na
+          saúde mental dos jovens brasileiros, <strong>escreva uma carta do leitor</strong>
+          para um jornal de grande circulação. Em sua carta, apresente sua opinião
+          sobre o tema, mencione informações do vídeo para fundamentar seus argumentos
+          e proponha uma medida concreta para lidar com a situação.
+        </p>
+        <p style="margin-top:0.6rem; font-size:0.85rem; color:#666;">
+          Assine como "Participante do CELPE-BRAS". Extensão recomendada: 150–250 palavras.
+        </p>
+      </div>
+
+      <textarea class="ft-textarea" id="ft-writing-area"
+        placeholder="Prezado Editor,&#10;&#10;Escreva sua carta do leitor aqui..."
+        oninput="updateWordCount()"></textarea>
+      <div class="ft-word-count" id="ft-word-count">0 palavras</div>
+
+      <div class="ft-error" id="ft-tarefa-error"></div>
+
+      <div class="ft-nav">
+        <button class="ft-btn ft-btn-primary" id="ft-submit-writing" onclick="submitWriting()" disabled>Enviar para avaliação</button>
+      </div>
+    </div>
+
+
+    <!-- ==================== LOADING ==================== -->
+    <div id="ft-loading" class="ft-loading">
+      <div class="ft-spinner"></div>
+      <h2>Avaliando sua produção...</h2>
+      <p>A inteligência artificial está analisando seu texto com os critérios do CELPE-BRAS.<br>Isso pode levar alguns segundos.</p>
+    </div>
+
+
+    <!-- ==================== RESULTS ==================== -->
+    <div id="ft-results" class="ft-results">
+      <h2>Seu resultado</h2>
+
+      <div class="ft-score-ring" id="ft-score-ring">—</div>
+      <div class="ft-score-msg" id="ft-score-msg"></div>
+
+      <!-- AI feedback -->
+      <div class="ft-ai-feedback">
+        <h3>Avaliação detalhada — Critérios CELPE-BRAS</h3>
+        <div class="ft-ai-level" id="ft-ai-level">—</div>
+
+        <div class="ft-criteria-grid" id="ft-criteria-grid"></div>
+
+        <div class="ft-ai-comment" id="ft-ai-comment">—</div>
+      </div>
+
+      <!-- CTA -->
+      <div class="ft-cta-box">
+        <h3>Quer se preparar de verdade?</h3>
+        <ul>
+          <li>Simulações completas com 4 tarefas escritas + parte oral</li>
+          <li>Estímulos em vídeo, áudio e texto — como no exame real</li>
+          <li>Avaliação por IA com feedback detalhado em cada tarefa</li>
+          <li>Nível de certificação estimado após cada simulação</li>
+          <li>Estatísticas de progresso e histórico completo</li>
+        </ul>
+        <a href="https://civiclearn.com/celpe/checkout" class="ft-btn-white">Acesso completo — R$ 299</a>
+      </div>
+
+      <div class="ft-restart-btn">
+        <button class="ft-btn ft-btn-secondary" onclick="restartTest()">Tentar novamente</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>© <span id="footer-year"></span> CelpeBras.org — membro da rede CivicLearn.</div>
+    <div class="footer-links">
+      <a href="/teste-gratuito/">Teste gratuito</a>
+      <a href="/artigos/">Artigos</a>
+      <a href="/contato/">Contato</a>
+      <a href="/politicas/">Políticas</a>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+var EVAL_URL = "https://htgliokekeaovdiafrgs.supabase.co/functions/v1/celpe-free-eval";
+
+// ================================================================
+// NAVIGATION
+// ================================================================
+function hideAll() {
+  document.getElementById("ft-welcome").style.display = "none";
+  document.getElementById("ft-tarefa").classList.remove("active");
+  document.getElementById("ft-loading").classList.remove("active");
+  document.getElementById("ft-results").classList.remove("active");
+}
+
+function startTarefa() {
+  hideAll();
+  document.getElementById("ft-tarefa").classList.add("active");
+}
+
+function restartTest() {
+  hideAll();
+  document.getElementById("ft-writing-area").value = "";
+  document.getElementById("ft-word-count").textContent = "0 palavras";
+  document.getElementById("ft-word-count").className = "ft-word-count";
+  document.getElementById("ft-tarefa-error").style.display = "none";
+  document.getElementById("ft-submit-writing").disabled = true;
+  document.getElementById("ft-welcome").style.display = "block";
+}
+
+// ================================================================
+// WORD COUNT
+// ================================================================
+function updateWordCount() {
+  var text = document.getElementById("ft-writing-area").value.trim();
+  var words = text ? text.split(/\s+/).length : 0;
+  var el = document.getElementById("ft-word-count");
+  el.textContent = words + " palavras";
+
+  el.className = "ft-word-count";
+  if (words >= 80 && words < 150) el.className = "ft-word-count warning";
+  if (words >= 150) el.className = "ft-word-count good";
+
+  document.getElementById("ft-submit-writing").disabled = words < 40;
+}
+
+// ================================================================
+// SUBMIT
+// ================================================================
+async function submitWriting() {
+  var text = document.getElementById("ft-writing-area").value.trim();
+  if (!text || text.split(/\s+/).length < 40) return;
+
+  document.getElementById("ft-tarefa-error").style.display = "none";
+  hideAll();
+  document.getElementById("ft-loading").classList.add("active");
+
+  try {
+    var response = await fetch(EVAL_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        text: text,
+        task_prompt: "Carta do leitor sobre o impacto das redes sociais na saúde mental dos jovens brasileiros.",
+        genre: "carta do leitor"
+      })
+    });
+
+    if (!response.ok) {
+      var errBody = await response.json().catch(function() { return {}; });
+      if (response.status === 429) {
+        throw new Error(errBody.message || "Limite de avaliações atingido. Tente novamente em alguns minutos.");
+      }
+      throw new Error("Erro na avaliação. Tente novamente.");
+    }
+
+    var result = await response.json();
+    showResults(result);
+
+  } catch (err) {
+    console.error("AI evaluation error:", err);
+    hideAll();
+    document.getElementById("ft-tarefa").classList.add("active");
+    var errorEl = document.getElementById("ft-tarefa-error");
+    errorEl.textContent = err.message || "Ocorreu um erro na avaliação. Tente novamente.";
+    errorEl.style.display = "block";
+  }
+}
+
+// ================================================================
+// RESULTS
+// ================================================================
+function showResults(result) {
+  hideAll();
+
+  // Level in ring
+  var levelShort = {
+    "intermediario": "Inter-\nmediário",
+    "intermediario_superior": "Inter.\nSuperior",
+    "avancado": "Avançado",
+    "avancado_superior": "Avançado\nSuperior",
+    "sem_certificacao": "Sem\nCertif."
+  };
+  var ring = document.getElementById("ft-score-ring");
+  ring.textContent = levelShort[result.level] || result.level;
+
+  // Message
+  var levelMessages = {
+    "avancado_superior": "Impressionante! Seu texto demonstra domínio avançado do português.",
+    "avancado": "Muito bem! Seu texto mostra fluência e bom domínio da língua.",
+    "intermediario_superior": "Bom resultado! Você está no caminho certo para uma boa certificação.",
+    "intermediario": "Você atingiu o nível mínimo para certificação. Com mais prática, pode subir!",
+    "sem_certificacao": "Continue treinando — a prática regular faz toda a diferença."
+  };
+  document.getElementById("ft-score-msg").textContent =
+    levelMessages[result.level] || "Veja abaixo a avaliação detalhada.";
+
+  // Level badge
+  var levelLabels = {
+    "intermediario": "Intermediário",
+    "intermediario_superior": "Intermediário Superior",
+    "avancado": "Avançado",
+    "avancado_superior": "Avançado Superior",
+    "sem_certificacao": "Sem Certificação"
+  };
+  var levelEl = document.getElementById("ft-ai-level");
+  levelEl.textContent = levelLabels[result.level] || result.level;
+  levelEl.className = "ft-ai-level " + (result.level || "").replace(/_/g, "-");
+
+  // Criteria grid
+  var grid = document.getElementById("ft-criteria-grid");
+  var criteriaLabels = {
+    "adequacao_genero": "Adequação ao gênero",
+    "adequacao_discursiva": "Coerência e coesão",
+    "adequacao_linguistica": "Vocabulário e gramática",
+    "adequacao_interlocutor": "Adequação ao interlocutor",
+    "adequacao_proposito": "Cumprimento do propósito"
+  };
+  var criteria = result.criteria || {};
+
+  grid.innerHTML = "";
+  for (var key in criteriaLabels) {
+    if (criteria[key] !== undefined) {
+      grid.innerHTML += '<div class="ft-criterion">'
+        + '<div class="ft-criterion-label">' + criteriaLabels[key] + '</div>'
+        + '<div class="ft-criterion-score">' + criteria[key] + '/5</div>'
+        + '</div>';
+    }
+  }
+
+  // Comment
+  document.getElementById("ft-ai-comment").textContent = result.comment || "";
+
+  document.getElementById("ft-results").classList.add("active");
+}
+
+// ================================================================
+document.getElementById("footer-year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

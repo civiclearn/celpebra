@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>CELPE-BRAS – Simulação e Preparação para o Exame (2026)</title>
+
+  <!-- ===============================
+     SEO META
+  ================================== -->
+  <meta name="description" content="Prepare-se para o CELPE-BRAS com simulações completas, tarefas escritas e orais com avaliação por IA, e treino estruturado para a certificação de proficiência em português brasileiro.">
+  <meta name="keywords" content="CELPE-BRAS, exame CELPE-BRAS, proficiência português, certificação português brasileiro, simulação CELPE-BRAS, INEP">
+
+  <link rel="canonical" href="https://celpebras.org/">
+
+  <!-- ===============================
+     OPEN GRAPH
+  ================================== -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Preparação para o CELPE-BRAS – CelpeBras.org">
+  <meta property="og:description" content="Treine com simulações realistas e avaliação por IA para obter sua certificação de proficiência em língua portuguesa.">
+  <meta property="og:url" content="https://celpebras.org/">
+  <meta property="og:image" content="https://celpebras.org/assets/images/og-default.jpg">
+
+  <!-- ===============================
+     TWITTER CARD
+  ================================== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Preparação para o CELPE-BRAS – CelpeBras.org">
+  <meta name="twitter:description" content="Treine com simulações completas e avaliação por IA para o exame CELPE-BRAS.">
+  <meta name="twitter:image" content="https://celpebras.org/assets/images/og-default.jpg">
+
+  <!-- ===============================
+     JSON-LD
+  ================================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "CelpeBras.org",
+    "url": "https://celpebras.org/",
+    "description": "Plataforma de preparação para o exame CELPE-BRAS com simulações completas, tarefas escritas e orais avaliadas por IA, e treino estruturado para certificação de proficiência em português brasileiro.",
+    "logo": "https://celpebras.org/assets/images/br.svg",
+    "sameAs": ["https://civiclearn.com/celpe/"]
+  }
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/newhome.css">
+
+  <!-- Pricing styles -->
+  <style>
+    /* ===== PREMIUM PRICING ===== */
+    .premium-pricing {
+      margin-top: 3rem;
+      text-align: center;
+    }
+    .pricing-card {
+      background: #ffffff;
+      border-radius: 1.6rem;
+      max-width: 540px;
+      margin: 0 auto;
+      overflow: hidden;
+      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.08);
+    }
+    .pricing-top {
+      background: linear-gradient(135deg, #d4edda 0%, #a8d5ba 100%);
+      padding: 2rem 1rem 2.7rem;
+    }
+    .pricing-tag {
+      background: rgba(255, 255, 255, 0.65);
+      padding: 0.45rem 1.2rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #1b5e20;
+      backdrop-filter: blur(6px);
+    }
+    .pricing-price {
+      padding: 1.8rem 1rem 0.8rem;
+    }
+    .pricing-price .amount {
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: #1a1a1a;
+    }
+    .pricing-price .subtitle {
+      font-size: 1.05rem;
+      color: #555;
+      margin-top: 0.3rem;
+    }
+    .pricing-divider {
+      width: 82%;
+      margin: 1.6rem auto;
+      height: 1px;
+      background: rgba(0, 0, 0, 0.07);
+    }
+    /* Feature List */
+    .feature-list {
+      list-style: none;
+      margin: 1.2rem 0 0;
+      padding-left: 5rem;
+      text-align: left;
+    }
+    .feature-list li {
+      position: relative;
+      padding-left: 1.4rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #333;
+      line-height: 1.45;
+      margin-bottom: 0.65rem;
+    }
+    .feature-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.32rem;
+      width: 0.95rem;
+      height: 0.95rem;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M4.5 10.5 8 14l7.5-8.5' stroke='%232e7d32' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      opacity: 0.9;
+    }
+    .pricing-cta {
+      display: block;
+      width: 100%;
+      background: #2e7d32;
+      color: #fff;
+      padding: 1.15rem;
+      text-decoration: none;
+      margin-top: 1.8rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+      border-radius: 0;
+      transition: background 0.2s ease;
+    }
+    .pricing-cta:hover {
+      background: #1b5e20;
+    }
+    .pricing-guarantee {
+      margin-top: 1.4rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    /* Stats row */
+    .stats-row {
+      margin-top: 1.2rem;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .stat-box {
+      background: #ffffff;
+      border-radius: 1.2rem;
+      padding: 1.4rem 1.8rem;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      font-size: 0.95rem;
+      color: #555;
+      min-width: 110px;
+    }
+    .stat-box span {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #1a1a1a;
+    }
+    @media (max-width: 600px) {
+      .pricing-card { margin: 0 1rem; }
+      .feature-list { padding-left: 2rem; margin-left: 0; }
+      .feature-list li { padding-left: 1.2rem; }
+      .stats-row { flex-direction: column; gap: 1rem; }
+      .stat-box { width: 100%; }
+    }
+
+    /* ── Countdown mobile fix ── */
+    @media (max-width: 820px) {
+      .exam-status-counter {
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        padding: 0.6rem 0 0 !important;
+        border-right: none !important;
+        border-top: 1px solid rgba(0,0,0,0.08) !important;
+      }
+      .count-number {
+        font-size: 2.4rem !important;
+        line-height: 1 !important;
+      }
+      .count-unit {
+        margin-top: 2px !important;
+        text-align: center !important;
+      }
+      .exam-status-row {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0 !important;
+      }
+      .exam-status-text {
+        padding-top: 0.5rem;
+      }
+    }
+
+    /* Brazilian flag progress bar */
+    #inline-progressbar {
+      background: linear-gradient(
+        to right,
+        #009c3b 0%,
+        #009c3b 33%,
+        #ffdf00 33%,
+        #ffdf00 66%,
+        #002776 66%,
+        #002776 100%
+      ) !important;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="cl-header">
+  <div class="cl-header-inner">
+
+    <a href="/" class="cl-logo">
+      <img src="/assets/images/br.svg" alt="BR" />
+      <span>CelpeBras.org</span>
+    </a>
+
+    <nav class="cl-nav">
+      <a href="/teste-gratuito/">Teste gratuito</a>
+      <a href="/artigos/">Artigos</a>
+      <a href="/contato/">Contato</a>
+      <a href="https://civiclearn.com/celpe/login">Entrar</a>
+    </nav>
+
+    <div class="cl-right">
+      <div class="cl-powered">
+        powered by <span>CivicLearn</span>
+      </div>
+      <a href="https://civiclearn.com/celpe/checkout" class="cl-btn">
+        Acesso completo
+      </a>
+    </div>
+
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+  <!-- EXAM STATUS BAR -->
+  <section class="exam-status">
+    <div class="exam-status-inner">
+
+      <!-- LEFT ROW: EXAM DATE -->
+      <div class="exam-status-row">
+        <div class="exam-status-counter" id="status-test-counter">
+          <span class="count-number">—</span>
+          <span class="count-unit">DIAS</span>
+        </div>
+
+        <div class="exam-status-text">
+          <p class="exam-status-sentence" id="status-test-text">
+            A próxima aplicação do CELPE-BRAS acontece de
+            <strong>28 de abril a 1º de maio de 2026</strong>.
+          </p>
+        </div>
+      </div>
+
+      <!-- RIGHT ROW: REGISTRATION / NEXT PHASE -->
+      <div class="exam-status-row exam-status-row--registration">
+        <div class="exam-status-counter" id="status-reg-counter">
+          <span class="count-number">—</span>
+          <span class="count-unit">DIAS</span>
+        </div>
+
+        <div class="exam-status-text">
+          <p class="exam-status-sentence" id="status-reg-text">
+            As inscrições encerram em
+            <strong>6 de março de 2026</strong>.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HERO CENTER CONTENT -->
+  <div class="hero-center hero-center--spaced">
+
+    <h1 class="hero-title">
+      <span>Prepare-se para o CELPE-BRAS<br></span>
+      e obtenha sua certificação
+    </h1>
+
+    <p class="hero-subtitle">
+      Simulações completas com tarefas escritas e orais avaliadas por inteligência artificial.<br>
+      Treine no seu ritmo e chegue pronto no dia do exame.
+    </p>
+
+    <div class="hero-actions">
+      <a href="https://civiclearn.com/celpe/checkout" class="hero-primary-btn">
+        Começar a treinar
+      </a>
+      <a href="/teste-gratuito/" class="hero-secondary-btn">
+        Teste gratuito
+      </a>
+    </div>
+
+    <div class="hero-social">
+      <div class="hero-social-top">
+        <span class="rating-stars">★★★★★</span>
+        <span class="rating-word">Excelente</span>
+      </div>
+      <div class="hero-social-sub">
+        Milhares de candidatos preparados<br class="mobile-only">pela rede CivicLearn.
+      </div>
+    </div>
+
+    <style>
+      .hero-social { display: flex; flex-direction: column; align-items: center; gap: 0.2rem; max-width: min(100%, 480px); margin: 0 auto; }
+      .hero-social-top { display: flex; align-items: center; gap: 0.4rem; }
+      .hero-social-sub { font-size: 0.88rem; color: #666; text-align: center; max-width: 100%; overflow-wrap: break-word; padding: 0 1rem; }
+      .mobile-only { display: none; }
+      @media (max-width: 820px) { .mobile-only { display: inline; } }
+      @media (min-width: 821px) {
+        .hero-social { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 0.4rem; }
+        .hero-social-sub::before { content: "· "; }
+      }
+    </style>
+
+    <div class="hero-image-wide">
+      <img src="/assets/images/devices-celpebras.webp" alt="Plataforma CELPE-BRAS em diversos dispositivos">
+    </div>
+
+  </div>
+</section>
+
+
+<!-- FEATURES: EXAM COMPONENTS -->
+<section class="features-section">
+
+  <div class="section-heading">
+    <div class="section-kicker">Preparação estruturada</div>
+    <h2 class="section-title">Conheça o exame e treine com confiança</h2>
+    <p class="section-lead">
+      Simulações realistas, avaliação por IA e feedback detalhado para cada parte do CELPE-BRAS.
+    </p>
+  </div>
+
+  <div class="features-grid">
+
+    <!-- CARD 1: About CELPE-BRAS -->
+    <div class="feature-card" onclick="location.href='/sobre-o-exame/'">
+      <a href="/sobre-o-exame/" class="feature-card-link">
+
+        <div class="feature-icon">
+          <img src="/assets/images/5.svg" alt="Sobre o CELPE-BRAS">
+        </div>
+
+        <h3 class="feature-title">Sobre o CELPE-BRAS</h3>
+
+        <p class="feature-text">
+          O CELPE-BRAS é o único certificado brasileiro de proficiência em português para estrangeiros, reconhecido internacionalmente. Composto por Parte Escrita e Parte Oral.
+        </p>
+
+        <div class="feature-cta">
+          Saiba mais sobre o exame <span class="arrow">›</span>
+        </div>
+
+      </a>
+    </div>
+
+    <!-- CARD 2: Parte Escrita -->
+    <div class="feature-card" onclick="location.href='/teste-gratuito/'">
+      <a href="/teste-gratuito/" class="feature-card-link">
+
+        <div class="feature-icon">
+          <img src="/assets/images/6.svg" alt="Parte Escrita">
+        </div>
+
+        <h3 class="feature-title">Parte Escrita</h3>
+
+        <p class="feature-text">
+          Quatro tarefas integradas com estímulos em vídeo, áudio e texto. Pratique a produção escrita em contextos reais e receba avaliação detalhada por IA.
+        </p>
+
+        <div class="feature-cta">
+          Experimente grátis <span class="arrow">›</span>
+        </div>
+
+      </a>
+    </div>
+
+    <!-- CARD 3: Parte Oral -->
+    <div class="feature-card" onclick="location.href='https://civiclearn.com/celpe/checkout'">
+      <a href="https://civiclearn.com/celpe/checkout" class="feature-card-link">
+
+        <div class="feature-icon">
+          <img src="/assets/images/3.svg" alt="Parte Oral">
+        </div>
+
+        <h3 class="feature-title">Parte Oral</h3>
+
+        <p class="feature-text">
+          Simulação da entrevista oral com elementos provocadores, tempo de preparação e gravação de áudio. Transcrição automática e avaliação por IA.
+        </p>
+
+        <div class="feature-cta">
+          Comece a treinar <span class="arrow">›</span>
+        </div>
+
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- INLINE TEST -->
+<section class="inline-test">
+  <div class="inline-test-inner">
+
+    <h2 class="inline-test-heading">Teste seus conhecimentos</h2>
+    <p class="inline-test-lead">Três perguntas rápidas para avaliar seu nível</p>
+
+    <div id="inline-test-questions">
+      <!-- Questions loaded by hometest-celpebras.js -->
+    </div>
+
+    <div class="inline-progressbar-wrapper">
+      <div class="inline-progressbar" id="inline-progressbar"></div>
+    </div>
+
+    <div class="inline-cta-row">
+      <div class="upper-cta-wrapper">
+        <a href="/teste-gratuito/" class="btn-secondary-cta">Mais exercícios →</a>
+      </div>
+      <a href="https://civiclearn.com/celpe/checkout" class="hero-primary-btn">Criar conta agora</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- PRICING -->
+<section class="premium-pricing">
+  <div class="pricing-card">
+
+    <div class="pricing-top">
+      <span class="pricing-tag">Acesso Premium</span>
+    </div>
+
+    <div class="pricing-price">
+      <div class="amount">R$ 299</div>
+      <div class="subtitle">Pagamento único — acesso vitalício</div>
+    </div>
+
+    <div class="pricing-divider"></div>
+
+    <ul class="feature-list">
+      <li>Simulações completas do CELPE-BRAS (Parte Escrita + Parte Oral)</li>
+      <li>Tarefa 1 — produção escrita a partir de vídeo</li>
+      <li>Tarefa 2 — produção escrita a partir de áudio</li>
+      <li>Tarefa 3 — produção escrita a partir de texto</li>
+      <li>Tarefa 4 — produção escrita a partir de texto</li>
+      <li>Parte Oral — conversa com elemento provocador e gravação</li>
+      <li>Avaliação por inteligência artificial (escrita e oral)</li>
+      <li>Nível de certificação estimado (Intermediário a Avançado Superior)</li>
+      <li>Feedback detalhado após cada simulação</li>
+      <li>Estatísticas completas de progresso</li>
+      <li>Acesso em computador, tablet e celular</li>
+      <li>Ativação imediata após o pagamento</li>
+    </ul>
+
+    <a class="pricing-cta" href="https://civiclearn.com/celpe/checkout">
+      Começar agora
+    </a>
+
+  </div>
+
+  <div class="pricing-guarantee">
+    Pagamento único. Sem assinatura.
+  </div>
+</section>
+
+
+<!-- FAQ -->
+<section class="cl-faq">
+
+  <div class="section-heading">
+    <div class="section-kicker">Perguntas frequentes</div>
+    <h2 class="section-title">FAQ — CELPE-BRAS</h2>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <span>Isto é uma assinatura?</span>
+    </div>
+    <div class="faq-answer">
+      <p>Não. Um pagamento único de R$ 299 dá acesso ilimitado a todo o conteúdo, sem nenhuma assinatura.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <span>O que é o CELPE-BRAS?</span>
+    </div>
+    <div class="faq-answer">
+      <p>
+        O CELPE-BRAS (Certificado de Proficiência em Língua Portuguesa para Estrangeiros) é o único exame
+        brasileiro de proficiência em português reconhecido oficialmente pelo governo brasileiro.
+        É desenvolvido e aplicado pelo INEP (Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira)
+        e pelo Ministério da Educação.
+      </p>
+      <p>
+        O certificado é exigido para validação de diplomas estrangeiros, inscrição em universidades brasileiras
+        e diversas finalidades profissionais e migratórias.
+      </p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <span>Isto é uma inscrição para o exame oficial?</span>
+    </div>
+    <div class="faq-answer">
+      <p>
+        Não. Este é exclusivamente um programa de preparação para o exame.
+        A inscrição no exame oficial deve ser feita diretamente pelo site do INEP.
+      </p>
+      <p>
+        Nosso programa de treino não emite nenhum certificado — o objetivo é preparar você da melhor forma possível para o exame real.
+      </p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <span>Acabei de pagar. O que acontece agora?</span>
+    </div>
+    <div class="faq-answer">
+      <p>
+        Após o pagamento, você será redirecionado automaticamente para criar sua senha.
+        Basta escolher uma senha e pronto — o acesso à plataforma é imediato, sem necessidade de e-mails de confirmação.
+      </p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <span>As questões são iguais às do exame oficial?</span>
+    </div>
+    <div class="faq-answer">
+      <p>
+        Nossas tarefas são elaboradas com base no formato e nos critérios avaliados no CELPE-BRAS,
+        seguindo as diretrizes publicadas pelo INEP.
+      </p>
+      <p>
+        Não temos nenhuma vinculação com o INEP, o MEC ou o governo brasileiro.
+        Nosso programa é exclusivamente destinado a ajudar você a se preparar de forma eficaz.
+      </p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <span>O que são as simulações?</span>
+    </div>
+    <div class="faq-answer">
+      <p>
+        As simulações reproduzem a estrutura do exame CELPE-BRAS real: incluem as quatro tarefas da Parte Escrita
+        (com estímulos em vídeo, áudio e texto) e a Parte Oral (entrevista com elemento provocador),
+        seguindo o mesmo formato do exame oficial.
+      </p>
+      <p>
+        É a melhor forma de se familiarizar com as condições reais antes do dia da prova.
+      </p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <span>Quanto tempo leva a preparação?</span>
+    </div>
+    <div class="faq-answer">
+      <p>
+        Depende do seu nível atual de português.
+        A maioria dos utilizadores leva entre duas a quatro semanas para completar todas as simulações e exercícios.
+        Recomendamos que comece com antecedência.
+      </p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <span>Como funciona a avaliação por IA?</span>
+    </div>
+    <div class="faq-answer">
+      <p>
+        Suas produções escritas são avaliadas automaticamente por inteligência artificial,
+        seguindo os critérios oficiais do CELPE-BRAS (adequação, coerência, coesão, adequação lexical e gramatical).
+        Na Parte Oral, sua gravação é transcrita automaticamente e avaliada com os mesmos critérios.
+      </p>
+      <p>
+        Você recebe feedback detalhado e um nível de certificação estimado (de Sem Certificação a Avançado Superior)
+        após cada simulação.
+      </p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <span>Posso usar a plataforma no celular ou tablet?</span>
+    </div>
+    <div class="faq-answer">
+      <p>Sim. Você pode acessar a plataforma a partir de qualquer dispositivo com conexão à internet.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <span>Quais são os níveis de certificação do CELPE-BRAS?</span>
+    </div>
+    <div class="faq-answer">
+      <p>
+        O CELPE-BRAS certifica em quatro níveis: Intermediário, Intermediário Superior, Avançado e Avançado Superior.
+        O nível é determinado pelo menor desempenho entre a Parte Escrita e a Parte Oral — ou seja,
+        é preciso alcançar pelo menos o nível Intermediário em ambas as partes para obter a certificação.
+      </p>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- FEATURED ARTICLES -->
+<section class="home-articles">
+  <div class="section-heading">
+    <div class="section-kicker">Mais para ler</div>
+    <h2 class="section-title">Artigos sobre o CELPE-BRAS</h2>
+    <p class="section-lead">
+      Dicas, estratégias e informações de fundo para se preparar para o exame.
+    </p>
+  </div>
+
+  <div class="home-articles-grid" id="homeArticlesGrid"></div>
+
+  <p class="home-articles-more">
+    <a href="/artigos/">Ver todos os artigos →</a>
+  </p>
+</section>
+
+
+<!-- COMPATIBILITY -->
+<section class="compat-section">
+  <div class="compat-inner">
+
+    <h2 class="compat-title">Compatível com todos os dispositivos e navegadores modernos</h2>
+
+    <div class="compat-grid">
+      <div class="compat-item"><img src="/assets/images/logos/windows.svg"><p>Windows</p></div>
+      <div class="compat-item"><img src="/assets/images/logos/macos.svg"><p>macOS</p></div>
+      <div class="compat-item"><img src="/assets/images/logos/android.svg"><p>Android</p></div>
+      <div class="compat-item"><img src="/assets/images/logos/ios.svg"><p>iPhone / iPad</p></div>
+      <div class="compat-item"><img src="/assets/images/logos/chrome.svg"><p>Chrome</p></div>
+      <div class="compat-item"><img src="/assets/images/logos/safari.svg"><p>Safari</p></div>
+      <div class="compat-item"><img src="/assets/images/logos/firefox.svg"><p>Firefox</p></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>© <span id="footer-year"></span> CelpeBras.org — membro da rede CivicLearn.</div>
+    <div class="footer-links">
+      <a href="/teste-gratuito/">Teste gratuito</a>
+      <a href="/artigos/">Artigos</a>
+      <a href="/contato/">Contato</a>
+      <a href="/politicas/">Políticas</a>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ===============================
+   INLINE TEST JS
+================================== -->
+<script src="/assets/js/hometest-celpebras.js"></script>
+
+
+<!-- FAQ ACCORDION -->
+<script>
+document.querySelectorAll(".faq-item").forEach(item => {
+  const q = item.querySelector(".faq-question");
+  q.addEventListener("click", () => {
+    document.querySelectorAll(".faq-item").forEach(i => {
+      if (i !== item) i.classList.remove("open");
+    });
+    item.classList.toggle("open");
+  });
+});
+</script>
+
+
+<!-- ======================================================
+   CELPE-BRAS — EXAM STATUS CONTROLLER
+   ====================================================== -->
+<script>
+
+/*
+  CELPE-BRAS 2026 Schedule (Edição 2026/1)
+  Source: INEP cronograma oficial
+*/
+const CELPE_SCHEDULE = [
+  {
+    edition: "2026/1",
+    registration_open:  "2026-02-24",
+    registration_close: "2026-03-06",
+    payment_deadline:   "2026-03-11",
+    exam_start:         "2026-04-28",
+    exam_end:           "2026-05-01",
+    results:            "2026-06-30"
+  }
+  // Add 2026/2 when INEP publishes it
+];
+
+/* -------- HELPERS -------- */
+
+function daysUntil(dateStr) {
+  const now = new Date();
+  const target = new Date(dateStr + "T00:00:00");
+  return Math.max(0, Math.ceil((target - now) / 86400000));
+}
+
+function dayLabel(n) {
+  return n === 1 ? "DIA" : "DIAS";
+}
+
+function formatDateBR(dateStr) {
+  const d = new Date(dateStr + "T00:00:00");
+  return d.toLocaleDateString("pt-BR", {
+    day: "numeric",
+    month: "long",
+    year: "numeric"
+  });
+}
+
+function formatDateRangeBR(startStr, endStr) {
+  const s = new Date(startStr + "T00:00:00");
+  const e = new Date(endStr + "T00:00:00");
+  const sDay = s.getDate();
+  const eDay = e.getDate();
+  const eMonth = e.toLocaleDateString("pt-BR", { month: "long" });
+  const eYear = e.getFullYear();
+
+  if (s.getMonth() === e.getMonth()) {
+    return sDay + " a " + eDay + " de " + eMonth + " de " + eYear;
+  }
+  const sMonth = s.toLocaleDateString("pt-BR", { month: "long" });
+  return sDay + " de " + sMonth + " a " + eDay + " de " + eMonth + " de " + eYear;
+}
+
+/* -------- FIND CURRENT EDITION -------- */
+
+function findCurrentEdition() {
+  const now = new Date();
+  now.setHours(0, 0, 0, 0);
+
+  for (let i = 0; i < CELPE_SCHEDULE.length; i++) {
+    const ed = CELPE_SCHEDULE[i];
+    const resultsDate = new Date(ed.results + "T00:00:00");
+    // Edition is relevant until results are published
+    if (resultsDate >= now) {
+      return { current: ed, next: CELPE_SCHEDULE[i + 1] || null };
+    }
+  }
+  return { current: null, next: null };
+}
+
+/* -------- MAIN LOGIC -------- */
+
+function updateCelpeStatus() {
+  const { current, next } = findCurrentEdition();
+
+  const rows = document.querySelectorAll(".exam-status-row");
+  if (rows.length < 2) return;
+
+  const leftRow  = rows[0];
+  const rightRow = rows[1];
+
+  const leftNum   = leftRow.querySelector(".count-number");
+  const leftUnit  = leftRow.querySelector(".count-unit");
+  const leftText  = document.getElementById("status-test-text");
+
+  const rightNum  = rightRow.querySelector(".count-number");
+  const rightUnit = rightRow.querySelector(".count-unit");
+  const rightText = document.getElementById("status-reg-text");
+
+  leftRow.classList.remove("is-urgent", "is-closed");
+  rightRow.classList.remove("is-urgent", "is-closed");
+
+  /* --- NO UPCOMING EDITIONS --- */
+  if (!current) {
+    leftNum.textContent  = "—";
+    leftUnit.textContent = "";
+    leftText.innerHTML   = "Não há datas de CELPE-BRAS disponíveis no momento. Consulte o site do INEP para atualizações.";
+    rightRow.style.display = "none";
+    return;
+  }
+
+  rightRow.style.display = "";
+
+  const now      = new Date();
+  now.setHours(0, 0, 0, 0);
+  const regOpen  = new Date(current.registration_open + "T00:00:00");
+  const regClose = new Date(current.registration_close + "T00:00:00");
+  const payClose = new Date(current.payment_deadline + "T00:00:00");
+  const examStart = new Date(current.exam_start + "T00:00:00");
+  const examEnd   = new Date(current.exam_end + "T00:00:00");
+  const results   = new Date(current.results + "T00:00:00");
+
+  const dExam = daysUntil(current.exam_start);
+  const dReg  = daysUntil(current.registration_close);
+  const dResults = daysUntil(current.results);
+
+  /* =============================
+     PHASE 1 — BEFORE REGISTRATION OPENS
+     ============================= */
+  if (now < regOpen) {
+    var dOpen = daysUntil(current.registration_open);
+
+    leftNum.textContent  = dExam;
+    leftUnit.textContent = dayLabel(dExam);
+    leftText.innerHTML =
+      'A próxima aplicação do CELPE-BRAS acontece de ' +
+      '<strong>' + formatDateRangeBR(current.exam_start, current.exam_end) + '</strong>.';
+
+    rightNum.textContent  = dOpen;
+    rightUnit.textContent = dayLabel(dOpen);
+    rightText.innerHTML =
+      'As inscrições abrem em ' +
+      '<strong>' + formatDateBR(current.registration_open) + '</strong>.';
+
+    return;
+  }
+
+  /* =============================
+     PHASE 2 — REGISTRATION OPEN
+     ============================= */
+  if (now >= regOpen && now <= regClose) {
+
+    leftNum.textContent  = dExam;
+    leftUnit.textContent = dayLabel(dExam);
+    leftText.innerHTML =
+      'A próxima aplicação do CELPE-BRAS acontece de ' +
+      '<strong>' + formatDateRangeBR(current.exam_start, current.exam_end) + '</strong>.' +
+      ' <span class="status-pill is-open" style="background:#d4edda;color:#1b5e20;">Inscrições abertas</span>';
+
+    rightNum.textContent  = dReg;
+    rightUnit.textContent = dayLabel(dReg);
+    rightText.innerHTML =
+      'As inscrições encerram em ' +
+      '<strong>' + formatDateBR(current.registration_close) + '</strong>. Inscreva-se no site do INEP!';
+
+    rightRow.classList.add("is-urgent");
+    return;
+  }
+
+  /* =============================
+     PHASE 3 — REGISTRATION CLOSED, BEFORE EXAM
+     ============================= */
+  if (now > regClose && now < examStart) {
+
+    leftNum.textContent  = dExam;
+    leftUnit.textContent = dayLabel(dExam);
+    leftText.innerHTML =
+      'A próxima aplicação do CELPE-BRAS acontece de ' +
+      '<strong>' + formatDateRangeBR(current.exam_start, current.exam_end) + '</strong>.' +
+      ' <span class="status-pill">Inscrições encerradas</span>';
+
+    rightNum.textContent  = dExam;
+    rightUnit.textContent = dayLabel(dExam);
+    rightText.innerHTML =
+      'Hora de se preparar! Use nossas simulações para chegar pronto no dia do exame.';
+
+    return;
+  }
+
+  /* =============================
+     PHASE 4 — EXAM PERIOD
+     ============================= */
+  if (now >= examStart && now <= examEnd) {
+
+    leftNum.textContent  = "📝";
+    leftUnit.textContent = "";
+    leftText.innerHTML =
+      '<strong>O exame CELPE-BRAS está sendo aplicado agora!</strong>' +
+      ' Boa sorte a todos os participantes.';
+
+    rightNum.textContent  = dResults;
+    rightUnit.textContent = dayLabel(dResults);
+    rightText.innerHTML =
+      'Os resultados serão divulgados em ' +
+      '<strong>' + formatDateBR(current.results) + '</strong>.';
+
+    return;
+  }
+
+  /* =============================
+     PHASE 5 — AFTER EXAM, AWAITING RESULTS
+     ============================= */
+  if (now > examEnd && now <= results) {
+
+    leftNum.textContent  = dResults;
+    leftUnit.textContent = dayLabel(dResults);
+    leftText.innerHTML =
+      'O exame CELPE-BRAS ' + current.edition + ' já foi aplicado.' +
+      ' Os resultados serão divulgados em ' +
+      '<strong>' + formatDateBR(current.results) + '</strong>.';
+
+    if (next) {
+      var dNext = daysUntil(next.exam_start);
+      rightNum.textContent  = dNext;
+      rightUnit.textContent = dayLabel(dNext);
+      rightText.innerHTML =
+        'Próxima edição: ' +
+        '<strong>' + formatDateRangeBR(next.exam_start, next.exam_end) + '</strong>.';
+    } else {
+      rightNum.textContent  = "—";
+      rightUnit.textContent = "";
+      rightText.innerHTML =
+        'A próxima edição ainda não foi anunciada. Comece a se preparar desde já!';
+    }
+
+    return;
+  }
+}
+
+/* -------- INIT -------- */
+document.addEventListener("DOMContentLoaded", updateCelpeStatus);
+
+</script>
+
+<!-- FOOTER YEAR -->
+<script>
+  document.getElementById("footer-year").textContent = new Date().getFullYear();
+</script>
+
+<!-- HOME ARTICLES -->
+<script>
+(async function () {
+  const grid = document.getElementById("homeArticlesGrid");
+  if (!grid) return;
+
+  let all;
+  try {
+    const res = await fetch('/artigos/articles.json');
+    all = await res.json();
+  } catch(e) { return; }
+
+  const selected = all.sort(() => Math.random() - 0.5).slice(0, 6);
+
+  grid.innerHTML = selected.map(a => `
+    <a href="${a.url}" class="home-article-card">
+      <img src="${a.image}" alt="${a.title}" onerror="this.style.display='none'">
+      <div class="home-article-body">
+        <h3>${a.title}</h3>
+        <p>${a.desc}</p>
+      </div>
+    </a>
+  `).join('');
+})();
+</script>
+
+</body>
+</html>
